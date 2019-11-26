@@ -1,0 +1,88 @@
+* ,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 80%;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.007)
+}
+header{
+    margin: 50px 0;
+    width: 100%;
+}
+.header-light {
+    font-weight: lighter;
+}
+.header-bold {
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.utility-container {
+    border: 1px solid rgba(109, 105, 105,0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 40vh;
+    width: 100%;
+    box-shadow: 1px 4px 2px 4px rgba(0,0,0, .1);
+    border-radius: 4px;
+}
+
+.border-top-supervisor {
+    border-top: 5px solid rgba(31, 197, 238, 0.507);
+}
+.border-top-team {
+    border-top:  5px solid rgba(238, 31, 31, 0.507);
+}
+.border-top-karma {
+    border-top: 5px solid rgba(209, 119, 17, 0.753)
+}
+.border-top-calculator {
+    border-top: 5px solid rgba(55, 180, 211, 0.541);
+}
+.img {
+    float: right;
+    padding-top: 60px;
+}
+.img:hover {
+    transform: scale(1.2) ;
+}
+/* main style*/
+@media screen and (min-width:900px){
+body {
+    width:95%;
+    margin: auto;
+}
+header {
+    text-align:center;
+    padding-bottom: 80px;
+}
+
+main {
+    display: grid;
+    grid-template: (3,1fr );
+    grid-gap : 20px;
+    grid-auto-rows: minmax(100px, auto)
+}
+.border-top-supervisor {
+    grid-column: 1/2;
+}
+.border-top-team , .border-top-karma {
+    grid-column: 2/3;
+    position: relative;
+    bottom:80px
+}
+
+.border-top-calculator {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.border-top-supervisor img {
+    padding-top: 70px;
+}
+.img {
+    padding-top: 50px;
+}
+}
